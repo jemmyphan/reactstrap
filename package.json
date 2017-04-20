@@ -12,7 +12,9 @@
     "start": "BABEL_ENV=webpack webpack-dev-server --config ./webpack.dev.config.js --watch",
     "build-docs": "cross-env WEBPACK_BUILD=production webpack --config ./webpack.dev.config.js --progress --colors",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "prebuild": "BABEL_ENV=dist-dir babel src --out-dir lib --ignore src/__tests__/",
+    "prebuild": "npm run build:lib && npm run build:module",
+    "build:lib": "BABEL_ENV=dist-dir babel src --out-dir lib --ignore src/__tests__/",
+    "build:module": "BABEL_ENV=module-dir babel src --out-dir module --ignore src/__tests__/",
     "create-release": "npm test && sh ./scripts/release",
     "publish-release": "npm test && sh ./scripts/publish",
     "lint": "eslint src"
@@ -25,8 +27,9 @@
     "LICENSE",
     "README.md",
     "CHANGELOG.md",
+    "dist",
     "lib",
-    "dist"
+    "module"
   ],
   "keywords": [
     "reactstrap",
