@@ -1,7 +1,7 @@
 {
-  "name": "reactstrap",
-  "version": "4.5.0",
-  "description": "React Bootstrap 4 components",
+  "name": "@jemmyphan/reactstrap",
+  "version": "4.5.1",
+  "description": "React Bootstrap 4 components forked",
   "main": "dist/reactstrap.min.js",
   "jsnext:main": "dist/reactstrap.es.js",
   "module": "dist/reactstrap.es.js",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/reactstrap/reactstrap.git"
+    "url": "git+ssh://git@github.com/jemmyphan/reactstrap.git"
   },
   "files": [
     "LICENSE",
